@@ -1,0 +1,134 @@
+body {
+    /* background-color: #19376D; */
+    background-color: #f5f5f5;
+    background-image: url(webimg/graph_background.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.starter {
+    height: 400px;
+    width: 100%;
+}
+
+.starter img {
+    height: inherit;
+    width: inherit;
+    border-radius: 8px;
+    object-fit: cover;
+    overflow: hidden;
+
+}
+
+.speak {
+    z-index: 10;
+    position: sticky;
+    width: 98%;
+    height: 67px;
+    display: flex;
+    top: 0%;
+    border-radius: 5px;
+    padding: 7px;
+    backdrop-filter: brightness(30%);
+    border: 2px solid;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+    color: #fff;
+}
+
+
+.parent {
+    display: block;
+    width: auto;
+    border-radius: 11px;
+
+}
+
+.card {
+    position: relative;
+    height: max-content;
+    background: #daeaed;
+    padding: 2rem 1.5rem;
+    margin: 45px 150px;
+    border-radius: 11px;
+    transition: box-shadow .3s ease, transform .2s ease;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform .2s ease, opacity .2s ease;
+}
+p{
+    margin: 10px 0px;
+}
+
+/*Image*/
+.card-avatar {
+    --size: 80px;
+    background-image: url(webimg/logo_nitj.png);
+    background-size: cover;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    margin-top: -12px;
+    transition: transform .2s ease;
+}
+
+
+/*Text*/
+.card-title {
+    color: #333;
+    font-size: 1.7em;
+    font-weight: 600;
+    line-height: 2rem;
+    transition: 0.2s ease;
+}
+
+.card-subtitle {
+    margin-top: 10px;
+    color: #4f5b62;
+    font-size: 1.5em;
+}
+
+@media screen and (max-width:600px) {
+    .speak {
+        font-size: 55px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .speak {
+        font-size: 46px;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .speak {
+        font-size: 40px;
+    }
+}
+
+/*Hover*/
+.card:hover {
+    box-shadow: 0 14px 50px #ffff;
+    border: 0px;
+}
+
+.card:hover .card-info {
+    transform: translateY(-5%);
+}
+
+.card-avatar:hover {
+    transform: scale(1.07);
+}
+
+.card:hover .card-title {
+    color: #132f83;
+    cursor: default;
+    transform: scale(1.05);
+}
